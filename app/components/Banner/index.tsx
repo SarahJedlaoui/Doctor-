@@ -1,8 +1,9 @@
 "use client";
 import Image from 'next/image';
 import { Fade } from "react-awesome-reveal";
-
+import { useRouter } from "next/navigation";
 const ADHDModule = () => {
+    const router = useRouter();
     return (
         <div id="adhd-module" className="bg-[#FFF] min-h-screen flex flex-col items-center justify-center">
             <div className="max-w-md w-full mx-auto px-4 sm:px-6 lg:max-w-4xl lg:px-8">
@@ -39,7 +40,7 @@ const ADHDModule = () => {
                         </div>
                     </div>
                     <div className="p-6 pt-5">
-                        <button className="bg-[#7A939E] text-white text-lg font-medium py-3 px-6 rounded-lg w-full text-center">
+                        <button  onClick={() => router.push("/review")} className="bg-[#7A939E] text-white text-lg font-medium py-3 px-6 rounded-lg w-full text-center">
                             Validate the Content
                         </button>
                     </div>
